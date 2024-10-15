@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import Greeting from "./Greeting";
 
-test("renderiza el componente Greeting con un saludo personalizado", () => {
-  render(<App />);
+test("muestra el saludo personalizado", () => {
+  render(<Greeting name="Maria!" />);
   const greetingElement = screen.getByText("Hello,Maria!");
   expect(greetingElement).toBeInTheDocument();
 });
